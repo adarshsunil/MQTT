@@ -1,0 +1,15 @@
+2024-10-12 22:48:47,374 - Logging setup complete. Ready to log messages.
+2024-10-12 22:48:51,352 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 22:59:55,836 - Logging setup complete. Ready to log messages.
+2024-10-12 23:00:15,142 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 23:00:15,144 - Received message on devices/device2/status: Device 2 is online
+2024-10-12 23:00:38,415 - Received message on devices/device2/status: Device 2 is online
+2024-10-12 23:00:41,749 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 23:00:50,775 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 23:00:53,453 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 23:00:56,887 - Received message on devices/device2/status: Device 2 is online
+2024-10-12 23:02:30,034 - Logging setup complete. Ready to log messages.
+2024-10-12 23:02:52,468 - Received message on devices/device1/status: Device 1 is online
+2024-10-12 23:03:20,350 - Received message on devices/device3/status: Device 3 is online
+2024-10-12 23:11:32,473 - Message logging setup complete. Ready to log messages.
+2024-10-12 23:13:55,543 - Received message on devices/device5/status: Device 5 is online

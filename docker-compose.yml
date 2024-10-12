@@ -1,0 +1,23 @@
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto-broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  mqtt-subscriber:
+    build:
+      context: ./subscriber
+    container_name: mqtt-subscriber
+    depends_on:
+      - mosquitto
+    volumes:
+      - ./subscriber:/app
+    environment:
+      - MQTT_BROKER_HOST=mosquitto
+      - MQTT_BROKER_PORT=1883
+

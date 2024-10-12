@@ -26,3 +26,37 @@ Clone the project using SSH:
 git clone git@github.com:adarshsunil/MQTT.git
 cd MQTT
 ```
+### 2. Build and Run the Docker Containers
+Use Docker Compose to build and run the Mosquitto broker and the MQTT subscriber:
+```bash
+sudo docker-compose up -d --build
+```
+
+This will spin up two containers:
+
+Mosquitto Broker (mosquitto-broker): Provides the MQTT broker on port 1883.
+MQTT Subscriber (mqtt-subscriber): Subscribes to devices/+/status and logs messages and errors.
+
+### 3. Publish Messages to the Broker
+You can use the mosquitto_pub tool to publish messages to the broker:
+```bash
+mosquitto_pub -h localhost -t devices/device1/status -m "Device 1 is online"
+mosquitto_pub -h localhost -t devices/device2/status -m "Device 2 is online"
+```
+
+### 4. Check Logs
+Message logs are saved in received_messages.log:
+
+```bash
+cat subscriber/received_messages.log
+```
+Error logs (e.g., disconnections) are saved in errors.log:
+
+```bash
+cat subscriber/errors.log
+```
+### 5. Stopping the Containers
+To stop the Docker containers, run:
+```bash
+sudo docker-compose down
+```

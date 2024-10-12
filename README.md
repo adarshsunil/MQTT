@@ -27,7 +27,7 @@ git clone git@github.com:adarshsunil/MQTT.git
 cd MQTT
 ```
 ### 2. Build and Run the Docker Containers
-Use Docker Compose to build and run the Mosquitto broker and the MQTT subscriber:
+Use Docker Compose to build and run the Mosquitto broker and the MQTT subscriber under the Subscriber folder:
 ```bash
 sudo docker-compose up -d --build
 ```
@@ -48,12 +48,12 @@ mosquitto_pub -h localhost -t devices/device2/status -m "Device 2 is online"
 Message logs are saved in received_messages.log:
 
 ```bash
-cat subscriber/received_messages.log
+cat received_messages.log
 ```
 Error logs (e.g., disconnections) are saved in errors.log:
 
 ```bash
-cat subscriber/errors.log
+cat errors.log
 ```
 ### 5. Stopping the Containers
 To stop the Docker containers, run:
